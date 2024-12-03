@@ -35,7 +35,6 @@ const ArticleProfile = ({ article }) => {
   };
 
   useEffect(() => {
-    // Загрузка состояния лайка из localStorage
     const liked = JSON.parse(localStorage.getItem(`liked_${slug}`));
     if (liked !== null) {
       setIsLiked(liked);
@@ -43,8 +42,8 @@ const ArticleProfile = ({ article }) => {
   }, [slug]);
 
   const handleLike = () => {
-    const newFavoritedStatus = !isLiked; // Переключение состояния
-    setIsLiked(newFavoritedStatus); // Обновление состояния
+    const newFavoritedStatus = !isLiked;
+    setIsLiked(newFavoritedStatus);
     localStorage.setItem(`liked_${slug}`, JSON.stringify(newFavoritedStatus));
     dispatch(likeArticleThunk({ slug: article.slug, favorited: newFavoritedStatus }));
   };

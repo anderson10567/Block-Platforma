@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { yupResolver } from '@hookform/resolvers/yup';
 
-import { createArticleThunk } from '../../redux/createartical-reducer'; // Импортируйте ваш thunk для создания статьи
+import { createArticleThunk } from '../../redux/createartical-reducer';
 import Loader from '../loader/loader';
 
 import classes from './new-article.module.scss';

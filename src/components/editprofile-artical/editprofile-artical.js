@@ -16,9 +16,7 @@ const EditProfileArticle = () => {
   const dispatch = useDispatch();
   const navigation = useNavigate();
   const article = useSelector((state) => state.articles.article);
-  // const isEditingError = useSelector((state) => state.myArticle.isEditingError);
   const isEditingLoading = useSelector((state) => state.myArticle.isEditingLoading);
-  // const user = useSelector((state) => state.account.user);
   const userToken = useSelector((state) => state.account.token);
 
   const defaultTags = article.tagList.map((tag) => {
