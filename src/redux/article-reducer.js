@@ -56,7 +56,7 @@ export const articlesReducerSlice = createSlice({
       })
       .addCase(fetchArticlesThunk.rejected, (state) => {
         state.isLoading = false;
-        state.isError = true;
+        state.isError = false;
       })
       .addCase(fetchArticleThunk.pending, (state) => {
         state.isLoading = true;
